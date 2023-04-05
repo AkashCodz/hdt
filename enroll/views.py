@@ -4,6 +4,7 @@ from .forms import signupform     # Signup
 from django.contrib import messages     # Messages    
 from django.contrib.auth.forms import AuthenticationForm  #Login
 from django.contrib.auth import authenticate, login, logout
+from django.views.decorators.csrf import csrf_exempt
 
 # Signup
 def sign_up(request):
@@ -67,7 +68,8 @@ def home(request, template='enroll/index.html'):
 #     return prediction
 
 import requests
-import json   
+import json
+@csrf_exempt   
 def result(request, template = 'enroll/result.html'):
     age = int(request.POST['age'])
     sex = int(request.POST['sex'])
