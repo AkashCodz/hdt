@@ -6,7 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm  #Login
 from django.contrib.auth import authenticate, login, logout
 
 # Signup
-def sign_up(request, template='enroll/signup.html'):
+def sign_up(request):
     if request.method == 'POST':
         fm=signupform(request.POST)
         if fm.is_valid():
@@ -14,7 +14,7 @@ def sign_up(request, template='enroll/signup.html'):
             fm.save()
     else:
         fm=signupform()
-    return render(request, template ,{'form':fm})
+    return render(request, 'enroll/signup.html' ,{'form':fm})
 
 # Login
 def user_login(request, template="enroll/userlogin.html"):
