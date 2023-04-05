@@ -5,6 +5,9 @@
     <link  href='{% static "enroll/resultstyle.css" %}' rel="stylesheet">
   </head>
   <body>
+    <form action="" method="post">
+      {% csrf_token %}
+
     <div class="full">
   <div id="pre"> <h1>Prediction</h1> </div>
  
@@ -19,5 +22,6 @@
 </div>
 
     </div>
+    </form>
   </body>
 </html>
