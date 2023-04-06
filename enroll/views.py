@@ -52,51 +52,34 @@ def home(request, template='enroll/index.html'):
 import requests
 import json
 def result(request, template = 'enroll/result.html'):
-    
-    # URL="https://hdt-production.up.railway.app/api/"
-    # age = int(request.POST['age'])
-    # sex = int(request.POST['sex'])
-    # cp = int(request.POST['cp'])
-    # trestbps = int(request.POST['trestbps'])
-    # chol = int(request.POST['chol'])
-    # fbs = int(request.POST['fbs'])
-    # restecg = int(request.POST['restecg'])
-    # thalach = int(request.POST['thalach'])
-    # exang = int(request.POST['exang'])
-    # oldpeak = float(request.POST['oldpeak'])
-    # slope = int(request.POST['slope'])
-    # ca = int(request.POST['ca'])
-    # thal = int(request.POST['thal'])
-    # data={
-    #         "age":age,
-    #         "sex":sex,
-    #         "cp":cp,
-    #         "trestbps":trestbps,
-    #         "chol":chol,
-    #         "fbs":fbs,
-    #         "restecg":restecg,
-    #         "thalach":thalach,
-    #         "exang":exang,
-    #         "oldpeak":oldpeak,
-    #         "slope":slope,
-    #         "ca":ca,
-    #         "thal":thal
-    #     }
     URL="https://hdt-production.up.railway.app/api/"
+    age = int(request.POST['age'])
+    sex = int(request.POST['sex'])
+    cp = int(request.POST['cp'])
+    trestbps = int(request.POST['trestbps'])
+    chol = int(request.POST['chol'])
+    fbs = int(request.POST['fbs'])
+    restecg = int(request.POST['restecg'])
+    thalach = int(request.POST['thalach'])
+    exang = int(request.POST['exang'])
+    oldpeak = float(request.POST['oldpeak'])
+    slope = int(request.POST['slope'])
+    ca = int(request.POST['ca'])
+    thal = int(request.POST['thal'])
     data={
-            "age": 7,
-            "sex": 0,
-            "cp": 0,
-            "trestbps": 1,
-            "chol": 1,
-            "fbs": 0,
-            "restecg": 0,
-            "thalach": 1,
-            "exang": 0,
-            "oldpeak": 1.0,
-            "slope": 0,
-            "ca": 0,
-            "thal": 0
+            "age":age,
+            "sex":sex,
+            "cp":cp,
+            "trestbps":trestbps,
+            "chol":chol,
+            "fbs":fbs,
+            "restecg":restecg,
+            "thalach":thalach,
+            "exang":exang,
+            "oldpeak":oldpeak,
+            "slope":slope,
+            "ca":ca,
+            "thal":thal
         }
     
     headers={'content-Type':'application/json'}
