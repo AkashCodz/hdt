@@ -51,6 +51,7 @@ def home(request, template='enroll/index.html'):
 
 import requests
 import json
+
 def result(request, template = 'enroll/result.html'):
     URL="https://hdt-production.up.railway.app/api/"
     age = int(request.POST['age'])
