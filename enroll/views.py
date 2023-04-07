@@ -51,7 +51,6 @@ def home(request, template='enroll/index.html'):
 
 import requests
 import json
-
 def result(request, template = 'enroll/result.html'):
     URL="https://hdt-production.up.railway.app/api/"
     age = int(request.POST['age'])
@@ -87,8 +86,7 @@ def result(request, template = 'enroll/result.html'):
     json_data=json.dumps(data)
     r=requests.post(url=URL,headers=headers,data=json_data)
     data=r.json()
-    result = data
-    # result = data['Prediction'][0]
+    result = data['Prediction'][0]
 
     return render(request, template, {'result':result})
 
